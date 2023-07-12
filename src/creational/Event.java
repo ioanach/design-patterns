@@ -6,7 +6,7 @@ package src.creational;
 public abstract class Event {
     private String name;
 
-     public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -15,7 +15,7 @@ public abstract class Event {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.name;
     }
 

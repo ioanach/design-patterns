@@ -7,7 +7,7 @@ public class RequestToPay extends Request {
 
     @Override
     public void checkAvailability() throws Exception {
-        if (RequestAvailability.REQUEST_TO_PAY.isAvailable() == false) {
+        if (!RequestAvailability.REQUEST_TO_PAY.isAvailable()) {
             throw new Exception("Operation not supported");
         } else {
             System.out.println("RequestToPay is available");

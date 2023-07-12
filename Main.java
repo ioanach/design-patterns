@@ -2,11 +2,10 @@ import src.behavioural.Request;
 import src.behavioural.RequestToCancel;
 import src.behavioural.RequestToPay;
 import src.behavioural.RequestToRefund;
-import src.creational.Serbare;
 import src.creational.Event;
+import src.creational.Serbare;
 import src.creational.Untold;
 import src.structural.Account;
-import src.structural.AccountProxy;
 
 /**
  * You can write good code without using design patterns
@@ -54,24 +53,25 @@ public class Main {
         //Behavioural patterns
 
         Request userRequestToPay = new RequestToPay("RequestToPay");
-      //  userRequestToPay.submit(100);
+        //  userRequestToPay.submit(100);
         Request userRequestToCancel = new RequestToCancel("RequestToCancel");
-       // userRequestToCancel.submit(0);
+        // userRequestToCancel.submit(0);
         Request shopRequestToRefund = new RequestToRefund("RequestToRefund");
-        shopRequestToRefund.submit(100);
+        // shopRequestToRefund.submit(100);
 
     }
 
-    public static Event createEventNoFactory(String eventName){
-        if("Untold".equals(eventName)){
+    public static Event createEventNoFactory(String eventName) {
+        if ("Untold".equals(eventName)) {
             return new Untold();
         } else if ("Serbare".equals(eventName)) {
             return new Serbare();
-        } else{
+        } else {
             System.out.println("Event not defined!");
             return null;
         }
-        //for a new type of event / a new class, i would need to "grow" the if
+        //for a new type of event / a new class, I would need to "grow" the if
+        // and maybe even duplicate this code here
     }
 
 }

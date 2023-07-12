@@ -7,22 +7,22 @@ package src.structural;
 public class Account implements AccountActions {
     private float money;
 
-    private String bankName;
+    private final String bankName;
 
     public Account(String bankName) {
         this.bankName = bankName;
     }
 
     @Override
-    public void deposit(float amount){
-        if(amount > 0){
+    public void deposit(float amount) {
+        if (amount > 0) {
             money += amount;
         }
     }
 
-   @Override
+    @Override
     public void withdraw(float amount) {
-        if(amount > 0){
+        if (amount > 0) {
             money -= amount;
         }
     }

@@ -9,10 +9,11 @@ public abstract class Request {
 
     /**
      * This is the template method
+     *
      * @param amount
      * @throws Exception
      */
-    public final void submit(float amount) throws Exception{
+    public final void submit(float amount) throws Exception {
         checkAvailability();
         validate(amount);
         pay(amount);

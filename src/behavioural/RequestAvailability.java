@@ -8,9 +8,9 @@ public enum RequestAvailability {
     //shop can refund user
     REQUEST_TO_REFUND("RequestToRefund", false);
 
-    private String requestType;
+    private final String requestType;
 
-    private boolean isAvailable;
+    private final boolean isAvailable;
 
     RequestAvailability(String requestType, boolean isAvailable) {
         this.requestType = requestType;
