@@ -3,12 +3,15 @@ package src.behavioural;
 /**
  * Behavioural patterns -> interaction/communication between objects
  * distribution of responsibilities
+ *
  */
 public abstract class Request {
     private String type;
 
     /**
      * This is the template method
+     * Template design pattern defines the skeleton of the algorithm in the super class
+     * but allows subclasses to override specific steps of the algorithm
      *
      * @param amount
      * @throws Exception
