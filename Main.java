@@ -1,6 +1,9 @@
-import src.creational.BalulCopilariei;
+import src.behavioural.Request;
+import src.behavioural.RequestToCancel;
+import src.behavioural.RequestToPay;
+import src.behavioural.RequestToRefund;
+import src.creational.Serbare;
 import src.creational.Event;
-import src.creational.EventFactory;
 import src.creational.Untold;
 import src.structural.Account;
 import src.structural.AccountProxy;
@@ -21,16 +24,26 @@ public class Main {
 //        System.out.println("A3: a. Creational; b. Structural; c. Behavioural");
 
         //creational patterns
-        Event event  = createEventFactory("untold");
-        if(event!= null){
-            event.attend();
-        }
+
+        //without Factory
+//        Event event  = createEventNoFactory("Untold");
+//        if(event!= null){
+//            event.attend();
+//        }
+
+//        //with Factoru
+//        EventFactory eventFactory = new EventFactory();
+//        Event event= eventFactory.createEvent("balulcopilariei");
+//        if(event!= null){
+//            event.attend();
+//        }
 
         //Structural patterns
+
         Account myAccount = new Account("BT");
         //without proxy
 //        myAccount.deposit(100);
-//        myAccount.withdraw(50);
+//        myAccount.withdraw(200);
 //        System.out.println(myAccount.getMoneyAvailable());
         //with proxy
 //        AccountProxy accountProxy = new AccountProxy(myAccount);
@@ -38,21 +51,27 @@ public class Main {
 //        accountProxy.withdraw(200);
 //        System.out.println(accountProxy.getMoneyAvailable());
 
+        //Behavioural patterns
+
+        Request userRequestToPay = new RequestToPay("RequestToPay");
+      //  userRequestToPay.submit(100);
+        Request userRequestToCancel = new RequestToCancel("RequestToCancel");
+       // userRequestToCancel.submit(0);
+        Request shopRequestToRefund = new RequestToRefund("RequestToRefund");
+        shopRequestToRefund.submit(100);
+
     }
 
     public static Event createEventNoFactory(String eventName){
         if("Untold".equals(eventName)){
             return new Untold();
-        } else if ("BalulCopilariei".equals(eventName)) {
-            return new BalulCopilariei();
+        } else if ("Serbare".equals(eventName)) {
+            return new Serbare();
         } else{
             System.out.println("Event not defined!");
             return null;
         }
         //for a new type of event / a new class, i would need to "grow" the if
     }
-    public static Event createEventFactory(String eventName) throws Exception{
-        EventFactory eventFactory = new EventFactory();
-        return eventFactory.createEvent(eventName);
-    }
+
 }

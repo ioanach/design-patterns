@@ -1,5 +1,9 @@
 package src.structural;
 
+/**
+ * Structural patterns deal with the way objects are "stuctured" and organized
+ * concepts like: inheritance, composition
+ */
 public class Account implements AccountActions {
     private float money;
 

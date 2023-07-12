@@ -1,8 +1,8 @@
 package src.creational;
 
-public class BalulCopilariei extends Event{
-    public BalulCopilariei() {
-        setName("Balul copilariei");
+public class Serbare extends Event{
+    public Serbare() {
+        setName("Serbare");
     }
 
     private void playGames(){
