@@ -19,7 +19,6 @@ public class AccountProxy implements AccountActions {
         } else{
             System.out.println("Already connected to bank: "+ account.getBankName());
         }
-
     }
 
     @Override

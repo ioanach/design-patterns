@@ -6,7 +6,7 @@ public enum RequestAvailability {
     //user can cancel pay
     REQUEST_TO_CANCEL("RequestToCancel", true),
     //shop can refund user
-    REQUEST_TO_REFUND("RequestToRefund", false);
+    REQUEST_TO_REFUND("RequestToRefund", true);
 
     private final String requestType;
 

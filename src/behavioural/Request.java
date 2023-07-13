@@ -9,7 +9,7 @@ public abstract class Request {
     private String type;
 
     /**
-     * This is the template method
+     * This is the TEMPLATE METHOD
      * Template design pattern defines the skeleton of the algorithm in the super class
      * but allows subclasses to override specific steps of the algorithm
      *

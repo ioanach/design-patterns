@@ -10,7 +10,7 @@ public class EventFactory {
         if ("Untold".equalsIgnoreCase(eventName)) {
             return new Untold();
         }
-        if ("BalulCopilariei".equalsIgnoreCase(eventName)) {
+        if ("Serbare".equalsIgnoreCase(eventName)) {
             return new Serbare();
         }
         System.out.println("This event does not exist");

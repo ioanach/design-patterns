@@ -3,13 +3,15 @@ import src.behavioural.RequestToCancel;
 import src.behavioural.RequestToPay;
 import src.behavioural.RequestToRefund;
 import src.creational.Event;
+import src.creational.EventFactory;
 import src.creational.Serbare;
 import src.creational.Untold;
 import src.structural.Account;
+import src.structural.AccountProxy;
 
 /**
  * You can write good code without using design patterns
- * please don't force design patters :)
+ * please don't force design patterns :)
  * Code should be reusable, extensible and EASY TO READ
  * *
  */
@@ -17,12 +19,14 @@ public class Main {
     public static void main(String[] args) throws Exception {
 //        System.out.println("Q1: What are design patterns?");
 //        System.out.println("A1: Solutions to repetitive problems");
+
 //        System.out.println("Q2: What is Gof?");
 //        System.out.println("A2: The 4 authors that wrote the initial book on design patterns");
+
 //        System.out.println("Q3: What are the categories for design patterns?");
 //        System.out.println("A3: a. Creational; b. Structural; c. Behavioural");
 
-        //creational patterns
+        //-----creational patterns
 
         //without Factory
 //        Event event  = createEventNoFactory("Untold");
@@ -37,27 +41,27 @@ public class Main {
 //            event.attend();
 //        }
 
-        //Structural patterns
+        //-----Structural patterns
 
         Account myAccount = new Account("BT");
-        //without proxy
+//        without proxy
 //        myAccount.deposit(100);
 //        myAccount.withdraw(200);
 //        System.out.println(myAccount.getMoneyAvailable());
         //with proxy
 //        AccountProxy accountProxy = new AccountProxy(myAccount);
 //        accountProxy.deposit(100);
-//        accountProxy.withdraw(200);
+//        accountProxy.withdraw(50);
 //        System.out.println(accountProxy.getMoneyAvailable());
 
-        //Behavioural patterns
+        //------Behavioural patterns
 
         Request userRequestToPay = new RequestToPay("RequestToPay");
-        //  userRequestToPay.submit(100);
+//          userRequestToPay.submit(100);
         Request userRequestToCancel = new RequestToCancel("RequestToCancel");
-        // userRequestToCancel.submit(0);
+//         userRequestToCancel.submit(0);
         Request shopRequestToRefund = new RequestToRefund("RequestToRefund");
-        // shopRequestToRefund.submit(100);
+         shopRequestToRefund.submit(100);
 
     }
 
